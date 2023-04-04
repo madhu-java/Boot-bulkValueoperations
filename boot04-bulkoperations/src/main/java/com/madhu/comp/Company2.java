@@ -1,18 +1,14 @@
 package com.madhu.comp;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
-//import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(prefix="org.info")
+@ConfigurationProperties(prefix="my.info")
 //@PropertySource(value="in/madhu/commons/input.properties")
-@PropertySource("application.properties")
 
-public class Company {
-	@Value("${name}")
+public class Company2 {
 private String name;
 private String location;
 private Integer size;
@@ -36,7 +32,7 @@ public void setSize(Integer size) {
 }
 @Override
 public String toString() {
-	return "Company [name=" + name + ", location=" + location + ", size=" + size + "]";
+	return "Company2 [name=" + name + ", location=" + location + ", size=" + size + "]";
 }
 
 	
